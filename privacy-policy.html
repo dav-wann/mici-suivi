@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de confidentialité — MICI Suivi</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #2D3748;
+      background: #F7F7F2;
+      padding: 24px 16px 64px;
+    }
+    .container { max-width: 680px; margin: 0 auto; }
+    header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid #E2E8F0; }
+    h1 { font-size: 24px; font-weight: 700; color: #5B8A78; margin-bottom: 8px; }
+    .meta { font-size: 13px; color: #718096; }
+    h2 {
+      font-size: 17px; font-weight: 700; color: #2D3748;
+      margin: 32px 0 12px;
+    }
+    p { font-size: 15px; line-height: 1.7; color: #4A5568; margin-bottom: 12px; }
+    ul { margin: 8px 0 12px 20px; }
+    li { font-size: 15px; line-height: 1.7; color: #4A5568; margin-bottom: 4px; }
+    .highlight {
+      background: #E8F4F0; border-left: 3px solid #5B8A78;
+      padding: 14px 16px; border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+    }
+    .highlight p { margin: 0; font-weight: 500; color: #2D3748; }
+    a { color: #5B8A78; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #E2E8F0;
+      font-size: 13px; color: #718096; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Politique de confidentialité</h1>
+      <p class="meta">MICI Suivi &nbsp;·&nbsp; Dernière mise à jour : 30 mai 2026</p>
+    </header>
+
+    <div class="highlight">
+      <p>MICI Suivi ne collecte, ne vend et ne partage aucune donnée personnelle de santé.
+      Toutes vos données sont stockées localement sur votre appareil.</p>
+    </div>
+
+    <h2>1. Qui sommes-nous</h2>
+    <p>
+      MICI Suivi est une application mobile de suivi personnel développée par
+      Davine Ittoo, patient MICI, à titre indépendant.
+      Contact : [à compléter]
+    </p>
+
+    <h2>2. Données stockées sur votre appareil</h2>
+    <p>L'ensemble des données suivantes est stocké <strong>uniquement sur votre téléphone</strong>,
+    via le stockage local de l'application (AsyncStorage) :</p>
+    <ul>
+      <li>Selles enregistrées (date, heure, présence de sang)</li>
+      <li>Repas journalisés (description, photo, résultat d'analyse IA)</li>
+      <li>Poids quotidiens</li>
+      <li>Taille et profil</li>
+      <li>État clinique (RAS / rémission / poussée)</li>
+    </ul>
+    <p>Ces données ne quittent jamais votre appareil, sauf dans les deux cas décrits ci-dessous.</p>
+
+    <h2>3. Analyse IA — données transmises au serveur</h2>
+    <p>
+      Lorsque vous déclenchez une analyse IA (analyse d'un repas ou analyse statistique
+      des selles), les données suivantes sont envoyées à notre serveur proxy sécurisé,
+      hébergé sur Railway (Europe) :
+    </p>
+    <ul>
+      <li><strong>Analyse repas :</strong> description textuelle du repas, photo optionnelle,
+      état clinique sélectionné</li>
+      <li><strong>Analyse des habitudes :</strong> statistiques agrégées des 30 derniers jours
+      (nombres de selles, fréquences — sans horodatage précis)</li>
+    </ul>
+    <p>
+      Ces données sont transmises à l'API Anthropic (Claude) pour générer l'analyse,
+      puis la réponse est renvoyée à votre application.
+      <strong>Aucune de ces données n'est conservée sur notre serveur.</strong>
+      La transmission est chiffrée (HTTPS).
+    </p>
+    <p>
+      Anthropic applique sa propre politique de confidentialité, disponible sur
+      <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">anthropic.com/privacy</a>.
+    </p>
+
+    <h2>4. Export PDF</h2>
+    <p>
+      La fonction d'export génère un fichier PDF à partir de vos données locales.
+      Ce fichier est créé sur votre appareil et partagé uniquement si vous choisissez
+      de le partager manuellement. Aucun PDF n'est envoyé à nos serveurs.
+    </p>
+
+    <h2>5. Pas de compte, pas de tracking</h2>
+    <p>
+      MICI Suivi ne requiert aucun compte utilisateur, aucune inscription,
+      aucune adresse e-mail. L'application ne contient aucun outil d'analyse
+      comportementale, aucune publicité, aucun SDK de tracking tiers.
+    </p>
+
+    <h2>6. Permissions Android</h2>
+    <ul>
+      <li><strong>Caméra :</strong> uniquement pour photographier un repas, si vous le demandez</li>
+      <li><strong>Stockage / médias :</strong> pour sélectionner une photo depuis la galerie</li>
+    </ul>
+    <p>Ces permissions ne sont utilisées qu'à votre initiative et ne donnent accès
+    à aucune autre donnée de votre appareil.</p>
+
+    <h2>7. Données des mineurs</h2>
+    <p>
+      MICI Suivi n'est pas destinée aux enfants de moins de 16 ans.
+      Nous ne collectons sciemment aucune donnée provenant de mineurs.
+    </p>
+
+    <h2>8. Vos droits</h2>
+    <p>
+      Toutes vos données étant stockées localement, vous pouvez les supprimer
+      à tout moment en désinstallant l'application.
+      Pour toute question, contactez :
+      [à compléter]
+    </p>
+
+    <h2>9. Modifications</h2>
+    <p>
+      Cette politique peut être mise à jour. La date de dernière modification
+      est indiquée en haut de cette page.
+    </p>
+
+    <footer>
+      MICI Suivi &nbsp;·&nbsp; Conçu par un patient MICI, pour les patients MICI.
+    </footer>
+  </div>
+</body>
+</html>

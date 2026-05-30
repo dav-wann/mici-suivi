@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MICI Suivi</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #2D3748;
+      background: #F7F7F2;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 48px 40px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+    .dot {
+      width: 64px; height: 64px;
+      background: #5B8A78;
+      border-radius: 16px;
+      margin: 0 auto 24px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .dot span { font-size: 32px; }
+    h1 { font-size: 26px; font-weight: 700; color: #2D3748; margin-bottom: 8px; }
+    .tagline { font-size: 16px; color: #5B8A78; font-weight: 600; margin-bottom: 24px; }
+    p { font-size: 15px; line-height: 1.7; color: #718096; margin-bottom: 16px; }
+    .badges { display: flex; gap: 12px; justify-content: center; margin: 28px 0; flex-wrap: wrap; }
+    .badge {
+      background: #E8F4F0; color: #5B8A78;
+      border-radius: 20px; padding: 6px 16px;
+      font-size: 13px; font-weight: 600;
+    }
+    .legal { margin-top: 32px; padding-top: 24px; border-top: 1px solid #E2E8F0; }
+    .legal p { font-size: 13px; color: #A0AEC0; margin: 0; }
+    a { color: #5B8A78; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="dot"><span>💚</span></div>
+    <h1>MICI Suivi</h1>
+    <p class="tagline">Sois acteur de ta maladie.</p>
+
+    <p>
+      Journal de suivi quotidien pour les personnes atteintes de la
+      maladie de Crohn ou d'une rectocolite hémorragique.
+    </p>
+
+    <div class="badges">
+      <span class="badge">Selles</span>
+      <span class="badge">Repas</span>
+      <span class="badge">Poids & IMC</span>
+      <span class="badge">Analyse IA</span>
+      <span class="badge">Export PDF</span>
+    </div>
+
+    <p>
+      Conçu par un patient MICI, pour les patients MICI.<br>
+      Disponible sur Android.
+    </p>
+
+    <div class="legal">
+      <p>
+        Pour toute question, consultez notre
+        <a href="privacy-policy.html">politique de confidentialité</a>.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
