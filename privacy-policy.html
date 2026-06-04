@@ -39,7 +39,7 @@
   <div class="container">
     <header>
       <h1>Politique de confidentialité</h1>
-      <p class="meta">MICI Suivi &nbsp;·&nbsp; Dernière mise à jour : 30 mai 2026</p>
+      <p class="meta">MICI Suivi &nbsp;·&nbsp; Dernière mise à jour : 4 juin 2026</p>
     </header>
 
     <div class="highlight">
@@ -67,21 +67,27 @@
 
     <h2>3. Analyse IA — données transmises au serveur</h2>
     <p>
-      Lorsque vous déclenchez une analyse IA (analyse d'un repas ou analyse statistique
-      des selles), les données suivantes sont envoyées à notre serveur proxy sécurisé,
-      hébergé sur Railway (Europe) :
+      Lorsque vous déclenchez une analyse IA, voici précisément ce qui se passe :
+    </p>
+    <p><strong>Étape 1 — Calcul local sur votre téléphone</strong><br>
+      Avant tout envoi, l'application calcule des statistiques agrégées à partir de vos données.
+      Vos entrées individuelles (selles, repas, poids) ne quittent jamais votre appareil.
+    </p>
+    <p><strong>Étape 2 — Transmission au serveur proxy (Railway)</strong><br>
+      Seules les données suivantes sont envoyées, chiffrées via HTTPS, à notre serveur intermédiaire hébergé en Europe (Railway) :
     </p>
     <ul>
-      <li><strong>Analyse repas :</strong> description textuelle du repas, photo optionnelle,
-      état clinique sélectionné</li>
-      <li><strong>Analyse des habitudes :</strong> statistiques agrégées des 30 derniers jours
-      (nombres de selles, fréquences — sans horodatage précis)</li>
+      <li><strong>Analyse des habitudes digestives :</strong> statistiques agrégées sur 30 jours — nombre total de selles, moyenne par jour, répartition par plage horaire (matin / après-midi / soir / nuit), répartition par jour de semaine, intervalle moyen entre les selles, état clinique sélectionné. <em>Aucune selle individuelle, aucun horodatage précis, aucune donnée de sang par entrée n'est transmis.</em></li>
+      <li><strong>Analyse d'un repas :</strong> description textuelle du repas saisi, photo optionnelle, état clinique sélectionné. <em>Aucune donnée historique, aucun identifiant utilisateur n'est transmis.</em></li>
     </ul>
-    <p>
-      Ces données sont transmises à l'API Anthropic (Claude) pour générer l'analyse,
-      puis la réponse est renvoyée à votre application.
+    <p><strong>Étape 3 — Appel à l'API Anthropic (Claude)</strong><br>
+      Notre serveur transmet ces données à l'API Anthropic sous forme de texte pour générer l'analyse,
+      puis renvoie uniquement le résultat textuel à votre application.
       <strong>Aucune de ces données n'est conservée sur notre serveur.</strong>
-      La transmission est chiffrée (HTTPS).
+    </p>
+    <p><strong>Étape 4 — Mise en cache local</strong><br>
+      Le résultat de l'analyse est sauvegardé localement sur votre téléphone pour éviter
+      des appels répétés. Il n'est jamais transmis à un tiers.
     </p>
     <p>
       Anthropic applique sa propre politique de confidentialité, disponible sur
